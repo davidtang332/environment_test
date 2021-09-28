@@ -17,7 +17,12 @@
     <%= form.label :author %>
     <%= form.text_field :author %>
     <%= form.label :price %>
-    <%= number_to_currency(form.text_field, :price => "$") %>
+    <%= form.text_field :price %>
+    <%= form.label :published_date %>
+    <p> YEAR-MONTH-DAY </p>
+    <%= form.date_select :published_date, :include_blank => true, 
+      :use_short_month => true, :start_year => Time.now.year - 100, :end_year => Time.now.year %>
+    
   </div>
 
   <div class="actions">
