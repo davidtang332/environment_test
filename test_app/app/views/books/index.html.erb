@@ -23,12 +23,12 @@
         <td><%= book.published_date %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Delete', delete_subject_path(book), :class => 'action delete'} %></td>
+        <td><%= link_to 'Delete', delete_book_path(book), :class => 'action-delete' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<h3><%= link_to "Home", "/books" %></h3>
 <%= link_to 'New Book', new_book_path %>
